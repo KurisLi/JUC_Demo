@@ -18,7 +18,7 @@ public class CallableDemo {
 
     public static void main(String[] args) {
         FutureTask<Integer> futureTask = new FutureTask<>(new Mythread());
-        new Thread(futureTask,"A").start();
+        new Thread(futureTask, "A").start();
         try {
             System.out.println(futureTask.get());
         } catch (InterruptedException e) {
@@ -26,6 +26,6 @@ public class CallableDemo {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-    
+    }
 
 }
